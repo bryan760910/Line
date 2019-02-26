@@ -6,6 +6,7 @@ const config = require('./bottender.config.js').line;
 const bot = new LineBot({
   accessToken: config.accessToken,
   channelSecret: config.channelSecret,
+  sendMethod: 'reply', // Default: 'push'
 });
 
 bot.onEvent(async context => {
@@ -14,6 +15,6 @@ bot.onEvent(async context => {
 
 const server = createServer(bot);
 
-server.listen(5000, () => {
+server.listen((process.env.PORT || 5000, () => {
   console.log('server is running on 5000 port...');
 });
