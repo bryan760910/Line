@@ -10,7 +10,13 @@ const bot = new LineBot({
 });
 
 bot.onEvent(async context => {
-  console.log(context.LineContext)
+
+  async function fun1(req, res){
+    let response = await request.get('https://servicerd.sinotrade.com.tw/api/v1/codeList/stock_code');
+      if (response.err) { console.log('error');}
+      else { console.log(response); }
+  }
+
   await context.sendText('我是LINE機器人阿!!!!! 試試看 !!!');
 });
 
