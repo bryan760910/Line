@@ -10,7 +10,7 @@ const bot = new LineBot({
 });
 
 bot.onEvent(async context => {
-  await context.sendText('Hello World');
+  await context.sendText('鄭時雄快醒醒');
 });
 
 const server = createServer(bot);
