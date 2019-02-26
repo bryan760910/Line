@@ -9,14 +9,13 @@ const bot = new LineBot({
   sendMethod: 'reply', // Default: 'push'
 });
 
-
-
-
-
 bot.onEvent(async context => {
-  console.log(context)
+  console.log(context.rawBody.events[0].message.text)
   await context.sendText('我是LINE機器人阿!!!!! 試試看 !!!');
 });
+
+
+
 
 const server = createServer(bot);
 
