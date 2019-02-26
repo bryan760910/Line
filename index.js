@@ -10,7 +10,7 @@ const bot = new LineBot({
 });
 
 bot.onEvent(async context => {
-  console.log(context.rawBody.events[0].message.text)
+  console.log(context.rawBody.LineContext.events[0].message.text)
   await context.sendText('我是LINE機器人阿!!!!! 試試看 !!!');
 });
 
