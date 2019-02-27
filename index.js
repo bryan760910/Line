@@ -1,8 +1,9 @@
 const { LineBot } = require('bottender');
 const { createServer } = require('bottender/express');
 const config = require('./bottender.config.js').line;
-const stock = require('././stock/stock.js');
 
+const stock = require('././stock/stock.js');
+const help = require('././help/help.js');
 
 const bot = new LineBot({
     accessToken: config.accessToken,
@@ -11,17 +12,40 @@ const bot = new LineBot({
 });
 
 bot.onEvent(async context => {
+    
+    let userSays = context.event.message.text.trim();
+	let sentence = userSays.split(' ');
+	let caller = sentence.shift().trim().toLowerCase();
+	let secondSentence = sentence.join(' ').trim();
+	let msg = secondSentence.split(' ');
+	let category = msg.shift().trim().toLowerCase();
+	let question = msg.join().trim();
 
-    try {
-		let stockInfoDict = await stock.stockInfo(context.event.message.text);
-		let stockInfoMsg = stock.stockInfoMsg(context.event.message.text, stockInfoDict);
-		await context.sendText(stockInfoMsg);
-	} catch (error) {
-		let stockInfoMsg = stock.stockInfoMsg(context.event.message.text, error);
-		await context.sendText(stockInfoMsg);
+	console.log("caller", caller);
+	console.log("category", category);
+	console.log("question", question);
+
+	if (caller === "ca") {
+		switch (category) {
+			case "help": 
+				let helpMsg = help.helpInfo();
+				await context.sendText(helpMsg);
+				break;
+			case "stock" : 
+				try {
+					let stockInfoDict = await stock.stockInfo(question);
+					let stockInfoMsg = stock.stockInfoMsg(question, stockInfoDict);
+					await context.sendText(stockInfoMsg);
+				} catch (error) {
+					let stockInfoMsg = stock.stockInfoMsg(question, error);
+					await context.sendText(stockInfoMsg);
+				}
+				break;
+			default:
+				context.sendText("類別錯誤，請輸入 ca help 查看所有類別");
+				break;
+		}		
 	}
-    // console.log(context)
-    // await context.sendText('我是LINE機器人阿!!!!! 試試看 !!!');
 });
 
 const server = createServer(bot);
