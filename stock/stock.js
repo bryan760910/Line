@@ -32,7 +32,8 @@ stock.getStockInfo = (code) => {
     const info = sendRequest();
     return info;
     
-}
+};
+
 stock.InfoToMsg = (code, stockInfo) => {
     let msg;
     if (stockInfo.success == "True") {
@@ -48,7 +49,7 @@ stock.InfoToMsg = (code, stockInfo) => {
     return msg;
 
 
-}
+};
 
 module.exports = {
     stockInfo: stock.getStockInfo,

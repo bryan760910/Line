@@ -6,7 +6,7 @@ help.getlist = () => {
         { category : "help", desc : "ca help", descCHZN: "幫助"},
         { category : "stock", desc : "ca stock 股票代碼", descCHZN: "查詢股價"},
     ];
-}
+};
 
 help.InfoToMsg = () => {
     
@@ -17,7 +17,8 @@ help.InfoToMsg = () => {
         msg = msg + `${element.descCHZN} : ${element.desc} \n`;
     }, this);
     return msg;
-}
+};
+
 module.exports = {
     helpInfo : help.InfoToMsg
 };
