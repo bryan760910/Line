@@ -36,11 +36,11 @@ stock.getStockInfo = (code) => {
 stock.InfoToMsg = (code, stockInfo) => {
     let msg;
     if (stockInfo.success == "True") {
-        msg = `現 : ${stockInfo.result[code].Close} /n` +
-        `開 : ${stockInfo.result[code].Open} /n` + 
-        `高 : ${stockInfo.result[code].High} /n` +
-        `低 : ${stockInfo.result[code].Low} /n` +
-        `收 : ${stockInfo.result[code].Reference} /n`;
+        msg = `現 : ${stockInfo.result[code].Close} \n` +
+        `開 : ${stockInfo.result[code].Open} \n` + 
+        `高 : ${stockInfo.result[code].High} \n` +
+        `低 : ${stockInfo.result[code].Low} \n` +
+        `收 : ${stockInfo.result[code].Reference} \n`;
     } else {
         msg = stockInfo.result.msg;
     }
