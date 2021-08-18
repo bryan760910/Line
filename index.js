@@ -2,7 +2,7 @@ const { LineBot } = require('bottender');
 const { createServer } = require('bottender/express');
 const config = require('./bottender.config.js').line;
 
-const stock = require('././stock/stock.js');
+const TSCHero = require('././TSC/hero.js');
 const help = require('././help/help.js');
 
 const bot = new LineBot({
@@ -25,20 +25,20 @@ bot.onEvent(async context => {
 	console.log("category", category);
 	console.log("question", question);
 
-	if (caller === "ca") {
+	// caller + category + question
+	// caller ask ()
+	if (caller === "ask") {
 		switch (category) {
 			case "help": 
 				let helpMsg = help.helpInfo();
 				await context.sendText(helpMsg);
 				break;
-			case "stock" : 
+			case "hero" : 
 				try {
-					let stockInfoDict = await stock.stockInfo(question);
-					let stockInfoMsg = stock.stockInfoMsg(question, stockInfoDict);
-					await context.sendText(stockInfoMsg);
+					let heroInfo = TSCHero.getHeroInfo(question);
+					context.sendText(heroInfo); 
 				} catch (error) {
-					let stockInfoMsg = stock.stockInfoMsg(question, error);
-					await context.sendText(stockInfoMsg);
+					context.sendText("查詢錯誤 !! "); 
 				}
 				break;
 			default:

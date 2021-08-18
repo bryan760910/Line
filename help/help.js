@@ -3,8 +3,8 @@ const help = {};
 
 help.getlist = () => {
     return [
-        { category : "help", desc : "ca help", descCHZN: "幫助"},
-        { category : "stock", desc : "ca stock 股票代碼", descCHZN: "查詢股價"},
+        { category : "help", desc : "ask help", descCHZN: "語法說明"},
+        { category : "hero", desc : "ask hero 英靈名稱", descCHZN: "查詢英靈"},
     ];
 };
 
