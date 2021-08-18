@@ -2,9 +2,10 @@ const request = require('request');
 const hero = {};
 
 hero.infoList = (name) => {
+    let heroData;
     switch (name) {
         case "冰璃" :
-            return {
+            heroData = {
                 status : true,
                 level : "T0",
                 stone : "天。幽魉",
@@ -12,13 +13,12 @@ hero.infoList = (name) => {
                 skill : "【幽劍冥引】+【避實就虛】+【追擊or定魂】，可替換技能【冰華飛刺】往前突進之後還有一招連擊可以用,PVP或PVE跑圖好用"
             }
         default :
-            return {
+            heroData= {
                 status : false,
                 msg : "英靈查詢錯誤"
             }
     }
-
-
+    return heroData
 }
 
 hero.getHeroInfo = (name) => {
