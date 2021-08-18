@@ -34,10 +34,10 @@ hero.infoToMsg = (data) => {
     let msg;
     if (data.status) {
         msg = 
-        `排名 : ${data.level} \n` +
-        `魂石 : ${data.stone} \n` + 
-        `五內 : ${data.talent} \n` +
-        `技能 : ${data.skill} \n`
+        `排名 : ${data.level} \n\n` +
+        `魂石 : ${data.stone} \n\n` + 
+        `五內 : ${data.talent} \n\n` +
+        `技能 : ${data.skill} \n\n`
     } else {
         msg = data.msg;
     }
