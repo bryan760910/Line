@@ -13,11 +13,13 @@ hero.infoList = (name) => {
                 talent : "下路點到【定魂】後全走上,之後全開",
                 skill : "【幽劍冥引】+【避實就虛】+【追擊or定魂】，可替換技能【冰華飛刺】往前突進之後還有一招連擊可以用,PVP或PVE跑圖好用"
             }
+            break;
         default :
             heroData= {
                 status : false,
                 msg : "英靈查詢錯誤"
             }
+            break;
     }
     return heroData
 }
