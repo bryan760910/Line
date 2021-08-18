@@ -38,6 +38,7 @@ hero.infoToMsg = (data) => {
     } else {
         msg = data.msg;
     }
+    return msg
 }
 
 module.exports = {
