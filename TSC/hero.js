@@ -4,7 +4,8 @@ const hero = {};
 hero.infoList = (name) => {
     let heroData;
     switch (name) {
-        case "冰璃" :
+        case "冰璃" : 
+        case "ice" : 
             heroData = {
                 status : true,
                 level : "T0",
