@@ -178,7 +178,7 @@ hero.infoList = (name) => {
         case "白菀" : 
             heroData = {
                 status : true,
-                level : "(極) T0.5",
+                level : "(極) T2",
                 stone : "屍魔術士",
                 talent : "全走上",
                 skill : "一般帶法:【氣愈之術】+【神氛化法】+【血咒之仞OR氣愈之術】",
@@ -188,7 +188,7 @@ hero.infoList = (name) => {
         case "紫楓" : 
             heroData = {
                 status : true,
-                level : "(絕) T2",
+                level : "(絕) T1",
                 stone : "朱燄魔火，BOSS換妖術師",
                 talent : "輸出流走上拿【神念】後覺得這角色不錯可以走下拿【天瑞仙舞】",
                 skill : "一般帶法:【九天神雷】+【引雷召返】+【神念】，替補招:【天瑞仙舞】:全體-1CD+爆擊率30%偶有奇效可考慮",
