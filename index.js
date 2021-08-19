@@ -35,7 +35,13 @@ bot.onEvent(async context => {
 				break;
 			case "hero" : 
 				try {
-					let heroInfo = TSCHero.getHeroInfo(question);
+					let heroInfo
+					if (question === "all") {
+						heroInfo = TSCHero.getTotalList();
+					} else {
+						heroInfo = TSCHero.getHeroInfo(question);
+					}
+					
 					context.sendText(heroInfo); 
 				} catch (error) {
 					context.sendText("查詢錯誤 !! "); 
