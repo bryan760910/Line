@@ -53,7 +53,7 @@ bot.onEvent(async context => {
 					const adoInfo = TSCTools.getToolsInfo("ado");
 					context.sendText(adoInfo); 
 				} catch (ex) {
-					context.sendText(ex.message); 
+					// context.sendText(ex.message); 
 					context.sendText("查詢錯誤 !! "); 
 				}
 				break;

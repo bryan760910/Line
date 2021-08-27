@@ -17,6 +17,7 @@ tools.infoList = (name) => {
             }
             break;
     }
+    return toolsData;
 }
 
 tools.getToolsInfo = (name) => {
