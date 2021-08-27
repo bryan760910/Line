@@ -13,7 +13,7 @@ tools.infoList = (name) => {
         default :
             toolsData= {
                 status : false,
-                msg : "查無此英靈"
+                msg : "錯誤的搜尋"
             }
             break;
     }
