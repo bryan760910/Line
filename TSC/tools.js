@@ -46,8 +46,8 @@ tools.infoList = (category, name) => {
     return toolsData;
 }
 
-tools.getToolsInfo = (name) => {
-    const data = tools.infoList(name);
+tools.getToolsInfo = (category, name) => {
+    const data = tools.infoList(category, name);
     const msgText = tools.infoToMsg(data);
     return msgText;
 };
