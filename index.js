@@ -3,6 +3,7 @@ const { createServer } = require('bottender/express');
 const config = require('./bottender.config.js').line;
 
 const TSCHero = require('././TSC/hero.js');
+const TSCTools = require('././TSC/tools.js');
 const help = require('././help/help.js');
 
 const bot = new LineBot({
@@ -43,6 +44,14 @@ bot.onEvent(async context => {
 					}
 					
 					context.sendText(heroInfo); 
+				} catch (error) {
+					context.sendText("查詢錯誤 !! "); 
+				}
+				break;
+			case "ado" : 
+				try {
+					const adoInfo = TSCTools.getToolsInfo("ado");
+					context.sendText(adoInfo); 
 				} catch (error) {
 					context.sendText("查詢錯誤 !! "); 
 				}
