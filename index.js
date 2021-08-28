@@ -50,7 +50,7 @@ bot.onEvent(async context => {
 				break;
 			case "ado" : 
 				try {
-					const adoInfo = TSCTools.getToolsInfo("ado" , question);
+					const adoInfo = TSCTools.getToolsInfo(category , question);
 					context.sendText(adoInfo); 
 				} catch (ex) {
 					// context.sendText(ex.message); 
@@ -59,7 +59,7 @@ bot.onEvent(async context => {
 				break;
 			case "dream" : 
 				try {
-					const adoInfo = TSCTools.getToolsInfo("ado" , question);
+					const adoInfo = TSCTools.getToolsInfo(category , question);
 					context.sendText(adoInfo); 
 				} catch (ex) {
 					// context.sendText(ex.message); 
