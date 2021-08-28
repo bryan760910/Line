@@ -57,6 +57,16 @@ bot.onEvent(async context => {
 					context.sendText("查詢錯誤 !! "); 
 				}
 				break;
+			case "dream" : 
+				try {
+					const adoInfo = TSCTools.getToolsInfo("ado" , question);
+					context.sendText(adoInfo); 
+				} catch (ex) {
+					// context.sendText(ex.message); 
+					context.sendText("查詢錯誤 !! "); 
+				}
+				break;
+			
 			default:
 				context.sendText("類別錯誤，請輸入 ca help 查看所有類別");
 				break;
