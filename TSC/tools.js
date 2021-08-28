@@ -62,6 +62,7 @@ tools.infoList = (category, name) => {
                     高：主線20-7 寶箱 \n\n https://www.youtube.com/watch?v=1fqblcZV73w  \n\n
                     `
                 }
+                break;
             case "夜魑" : 
                 toolsData= {
                     status : true,
@@ -82,6 +83,7 @@ tools.infoList = (category, name) => {
                     高：織羅齋四象門委託少陰探查，50級光屬性靈脈光淵委託 \n\n https://www.youtube.com/watch?v=aqILlTps6O8&list=PLTyfBFNJiY4LH7nb5yuPB9QOAHsc3nH3s&index=18  \n\n
                     `
                 }
+                break;
             case "化蛇" : 
                 toolsData= {
                     status : true,
@@ -92,6 +94,7 @@ tools.infoList = (category, name) => {
                     高：山河志指定委託當我入夢·其一(尉遲良) 觸發等級49 \n\n https://www.youtube.com/watch?v=g9m_vQNT0ks&list=PLTyfBFNJiY4LH7nb5yuPB9QOAHsc3nH3s&index=6  \n\n
                     `
                 }
+                break;
             case "蝎子" : 
                 toolsData= {
                     status : true,
@@ -102,6 +105,7 @@ tools.infoList = (category, name) => {
                     高：蝕之隙 普通5-5 寶箱 \n\n https://www.youtube.com/watch?v=1OwXmr00KY4&list=PLTyfBFNJiY4LH7nb5yuPB9QOAHsc3nH3s&index=12  \n\n
                     `
                 }
+                break;
             case "死靈術士" : 
                 toolsData= {
                     status : true,
@@ -112,6 +116,7 @@ tools.infoList = (category, name) => {
                     高：60級光脈委託(倒序書裡領取，等級60解鎖) \n\n https://www.youtube.com/watch?v=7g3yR_v38mU&list=PLTyfBFNJiY4LH7nb5yuPB9QOAHsc3nH3s&index=15  \n\n
                     `
                 }
+                break;
             case "咒石兵" : 
                 toolsData= {
                     status : true,
@@ -122,6 +127,7 @@ tools.infoList = (category, name) => {
                     高：主線19-2 寶箱 \n\n https://www.youtube.com/watch?v=x2JypwHV7C8&list=PLTyfBFNJiY4LH7nb5yuPB9QOAHsc3nH3s&index=21  \n\n
                     `
                 }
+                break;
             case "噬魂鬼" : 
                 toolsData= {
                     status : true,
@@ -132,6 +138,7 @@ tools.infoList = (category, name) => {
                     高：55級山河志指定委託當我入夢·其五(三星韓無砂) \n\n https://www.youtube.com/watch?v=1fqblcZV73w&list=PLTyfBFNJiY4LH7nb5yuPB9QOAHsc3nH3s&index=24  \n\n
                     `
                 }
+                break;
             case "鬼面花蛛" : 
                 toolsData= {
                     status : true,
@@ -142,6 +149,7 @@ tools.infoList = (category, name) => {
                     高：蝕之隙9-5 寶箱 \n\n https://www.youtube.com/watch?v=09kDrDsBlAY&list=PLTyfBFNJiY4LH7nb5yuPB9QOAHsc3nH3s&index=27  \n\n
                     `
                 }
+                break;
             case "兇骸兵" : 
                 toolsData= {
                     status : true,
@@ -152,6 +160,7 @@ tools.infoList = (category, name) => {
                     高：蝕之隙10-4 寶箱 \n\n https://www.youtube.com/watch?v=kbMmjvGt73k&list=PLTyfBFNJiY4LH7nb5yuPB9QOAHsc3nH3s&index=30  \n\n
                     `
                 }
+                break;
             case "羅鬼" : 
                 toolsData= {
                     status : true,
@@ -162,6 +171,7 @@ tools.infoList = (category, name) => {
                     高：幻林 焰靈族的支線“雙面” 寶箱 \n\n https://www.youtube.com/watch?v=kL-LRt3o5QE&list=PLTyfBFNJiY4LH7nb5yuPB9QOAHsc3nH3s&index=33  \n\n
                     `
                 }
+                break;
             case "冥葵" : 
                 toolsData= {
                     status : true,
@@ -172,6 +182,7 @@ tools.infoList = (category, name) => {
                     高：(缺) \n\n https://www.youtube.com/watch?v=n4M1b7MM53w&list=PLTyfBFNJiY4LH7nb5yuPB9QOAHsc3nH3s&index=36  \n\n
                     `
                 }
+                break;
             default :
                 toolsData= {
                     status : false,
